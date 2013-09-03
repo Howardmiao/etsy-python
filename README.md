@@ -112,6 +112,10 @@ api = Etsy(method_cache=None)
 ## Version History
 
 
+### Version 0.3.2
+*delete read key file function
+
+
 ### Version 0.3.1
 * Allowing Python Longs to be passed for parameters declared as "integers" by the API 
   (thanks to [Marc Abramowitz](http://marc-abramowitz.com)). 
