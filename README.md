@@ -113,7 +113,7 @@ api = Etsy(method_cache=None)
 
 
 ### Version 0.3.2
-*delete read key file function
+* delete read key file function
 
 
 ### Version 0.3.1
