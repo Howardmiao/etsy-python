@@ -52,32 +52,6 @@ etsy_api = Etsy(etsy_oauth_client=oauth_client, etsy_env=etsy_env, log=my_log)
 
 # print 'oauth access token: (key=%r; secret=%r)' % (oauth_client.token.key, oauth_client.token.secret)
 
-print('findAllShopListingsActive => %r' % etsy_api.findAllShopListingsActive(shop_id=config.user_id, sort_on='created', limit=1))
+print('findAllShopListingsActive => %r' % etsy_api.findAllShopListingsActive(shop_id=config.shop_id, sort_on='created', limit=1))
 
-# print('getListing => %r' % etsy_api.getListing(listing_id=63067548))
-
-print('findAllUserShippingTemplates => %r' % etsy_api.findAllUserShippingTemplates(user_id=config.user_id))
-
-def testCreateListing():
-    print "Creating listing..."
-    
-    result = etsy_api.createListing(
-        description=config.description,
-        title=config.title,
-        price=config.price,
-        tags=config.tags,
-        materials=config.materials,
-        shipping_template_id=config.shipping_template_id,
-        shop_section_id=config.shop_section_id,
-        quantity=config.quantity)
-
-    listing_id = result[0]['listing_id']
-
-    print "Created listing with listing id %d" % listing_id
-
-    result = etsy_api.uploadListingImage(listing_id=listing_id, image=config.image_file)
-
-    print "Result of uploading image: %r" % result
-
-testCreateListing()
 
