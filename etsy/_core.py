@@ -246,8 +246,8 @@ class API(object):
 
         if api_key:
             self.api_key = api_key
-        else:
-            self.api_key = self._read_key(key_file)
+        # else:
+        #     self.api_key = self._read_key(key_file)
 
         self.log = log or self._ignore
         if not callable(self.log):
